@@ -38,19 +38,19 @@ body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg)
 /* ===== MOBILE-FIRST BASE (< 640px) ===== */
 
 /* HERO */
-.hero{position:relative;min-height:85vh;min-height:85dvh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:1.25rem;padding-top:calc(1.25rem + var(--safe-top))}
+.hero{position:relative;min-height:85vh;min-height:85dvh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:1.5rem;padding-top:calc(1.5rem + var(--safe-top))}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 90% 60% at 50% 40%,rgba(0,204,102,.14) 0%,rgba(124,108,255,.07) 40%,transparent 70%)}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(42,42,68,.25) 1px,transparent 1px),linear-gradient(90deg,rgba(42,42,68,.25) 1px,transparent 1px);background-size:40px 40px;mask-image:radial-gradient(ellipse 80% 50% at 50% 50%,black 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse 80% 50% at 50% 50%,black 20%,transparent 70%)}
 .hero-content{position:relative;z-index:1;max-width:800px;width:100%}
-.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:var(--surface2);border:1px solid var(--border);border-radius:100px;padding:.35rem .85rem;font-size:.65rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text2);margin-bottom:1.25rem}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:var(--surface2);border:1px solid var(--border);border-radius:100px;padding:.4rem 1rem;font-size:.65rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text2);margin-bottom:1.5rem}
 .hero-badge .live{width:8px;height:8px;background:var(--sea);border-radius:50%;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.hero h1{font-size:2.6rem;font-weight:900;letter-spacing:-.03em;line-height:1.05;margin-bottom:.4rem}
+.hero h1{font-size:2.6rem;font-weight:900;letter-spacing:-.03em;line-height:1.05;margin-bottom:.6rem}
 .hero h1 .sea{color:var(--sea)}
 .hero h1 .ne{color:var(--ne)}
 .hero h1 .vs{color:var(--text3);font-size:.45em;vertical-align:middle;margin:0 .2em}
-.hero-sub{font-size:.95rem;color:var(--text2);font-weight:300;margin-bottom:1.5rem}
-.hero-meta{display:flex;flex-direction:column;align-items:center;gap:.4rem;font-size:.8rem;color:var(--text3)}
+.hero-sub{font-size:.95rem;color:var(--text2);font-weight:300;margin-bottom:1.75rem}
+.hero-meta{display:flex;flex-direction:column;align-items:center;gap:.5rem;font-size:.8rem;color:var(--text3)}
 .hero-meta span{display:flex;align-items:center;gap:.4rem}
 
 /* SCROLL CTA */
@@ -66,24 +66,25 @@ body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg)
 .nav a:hover,.nav a.active{color:var(--text);background:var(--surface2)}
 
 /* LAYOUT */
-.container{max-width:1200px;margin:0 auto;padding:0 1rem}
-section{padding:2.5rem 0}
+.container{max-width:1200px;margin:0 auto;padding:0 1.25rem}
+section{padding:3rem 0}
+section + section{padding-top:1rem}
 .section-head{margin-bottom:2rem}
-.section-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem}
+.section-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
 .section-title{font-size:1.6rem;font-weight:800;letter-spacing:-.02em;line-height:1.15}
-.section-desc{color:var(--text2);font-size:.9rem;margin-top:.4rem;max-width:600px}
+.section-desc{color:var(--text2);font-size:.9rem;margin-top:.5rem;max-width:600px;line-height:1.7}
 
 /* CARDS */
-.grid{display:grid;gap:1rem}
+.grid{display:grid;gap:1.25rem}
 .grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.25rem;transition:border-color .2s}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.25rem;transition:border-color .25s,transform .25s,box-shadow .25s}
 .card:hover{border-color:var(--border2)}
 .card-label{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text3);margin-bottom:.6rem}
 .card-value{font-size:1.8rem;font-weight:800;letter-spacing:-.02em}
-.card-sub{font-size:.8rem;color:var(--text2);margin-top:.2rem}
+.card-sub{font-size:.8rem;color:var(--text2);margin-top:.3rem;line-height:1.5}
 
 /* ODDS DISPLAY */
-.odds-row{display:flex;align-items:center;justify-content:space-between;padding:.65rem 0;border-bottom:1px solid var(--border);min-height:44px}
+.odds-row{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0;border-bottom:1px solid var(--border);min-height:44px}
 .odds-row:last-child{border-bottom:none}
 .odds-name{font-weight:500;font-size:.85rem;flex:1;padding-right:.5rem}
 .odds-value{font-weight:700;font-family:'JetBrains Mono',monospace;font-size:.85rem;flex-shrink:0}
@@ -91,7 +92,7 @@ section{padding:2.5rem 0}
 .odds-value.minus{color:var(--ne)}
 
 /* BAR CHART */
-.bar-chart{display:flex;flex-direction:column;gap:.5rem}
+.bar-chart{display:flex;flex-direction:column;gap:.6rem}
 .bar-row{display:flex;align-items:center;gap:.5rem}
 .bar-label{width:90px;font-size:.7rem;font-weight:500;text-align:right;flex-shrink:0;color:var(--text2);line-height:1.2}
 .bar-track{flex:1;height:26px;background:var(--surface2);border-radius:6px;overflow:hidden;position:relative}
@@ -102,11 +103,11 @@ section{padding:2.5rem 0}
 .bar-fill.accent{background:linear-gradient(90deg,var(--accent2),var(--accent))}
 .bar-fill.blue{background:linear-gradient(90deg,#08a,#0af)}
 
-/* COMPARISON TABLE — mobile: horizontal scroll card */
-.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -1rem;padding:0 1rem;scroll-snap-type:x mandatory}
+/* COMPARISON TABLE */
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -1.25rem;padding:0 1.25rem;scroll-snap-type:x mandatory}
 .comp-table{width:100%;border-collapse:collapse;min-width:580px}
-.comp-table th{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);padding:.6rem .5rem;text-align:left;border-bottom:2px solid var(--border);position:sticky;top:0;background:var(--surface)}
-.comp-table td{padding:.6rem .5rem;border-bottom:1px solid var(--border);font-size:.8rem;white-space:nowrap}
+.comp-table th{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);padding:.7rem .5rem;text-align:left;border-bottom:2px solid var(--border);position:sticky;top:0;background:var(--surface)}
+.comp-table td{padding:.7rem .5rem;border-bottom:1px solid var(--border);font-size:.8rem;white-space:nowrap}
 .comp-table tr:active td{background:var(--surface2)}
 .comp-table .highlight{color:var(--sea);font-weight:700}
 .platform-tag{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.12rem .4rem;border-radius:4px;margin-right:.2rem}
@@ -114,17 +115,38 @@ section{padding:2.5rem 0}
 .platform-tag.fd{background:rgba(0,170,255,.15);color:#0af}
 .platform-tag.kalshi{background:rgba(255,170,0,.15);color:var(--gold)}
 .platform-tag.poly{background:rgba(124,108,255,.15);color:var(--accent)}
-.scroll-hint{display:block;text-align:center;font-size:.7rem;color:var(--text3);margin-top:.5rem;font-weight:500}
+.scroll-hint{display:block;text-align:center;font-size:.7rem;color:var(--text3);margin-top:.75rem;font-weight:500}
+
+/* BETTING LINKS */
+.bet-links{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.6rem}
+.bet-link{display:inline-flex;align-items:center;gap:.3rem;font-size:.65rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:.3rem .6rem;border-radius:6px;text-decoration:none;transition:opacity .2s,transform .15s}
+.bet-link:hover{opacity:.85;transform:translateY(-1px)}
+.bet-link:active{transform:scale(.97)}
+.bet-link.dk{background:rgba(0,204,102,.12);color:var(--sea);border:1px solid rgba(0,204,102,.2)}
+.bet-link.fd{background:rgba(0,170,255,.12);color:#0af;border:1px solid rgba(0,170,255,.2)}
+.bet-link.kalshi{background:rgba(255,170,0,.12);color:var(--gold);border:1px solid rgba(255,170,0,.2)}
+.bet-link.poly{background:rgba(124,108,255,.12);color:var(--accent);border:1px solid rgba(124,108,255,.2)}
+.bet-link svg{width:12px;height:12px;fill:currentColor}
+
+/* TOOLTIPS */
+.has-tip{position:relative;cursor:help;border-bottom:1px dashed var(--border2)}
+.tip{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%) translateY(4px);background:var(--surface3);border:1px solid var(--border2);border-radius:10px;padding:.75rem 1rem;font-size:.78rem;color:var(--text2);line-height:1.6;width:max-content;max-width:300px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:200;box-shadow:0 8px 32px rgba(0,0,0,.4)}
+.tip::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:6px solid transparent;border-top-color:var(--surface3)}
+.has-tip:hover .tip,.has-tip:focus .tip,.has-tip.tip-active .tip{opacity:1;transform:translateX(-50%) translateY(0);pointer-events:auto}
+.tip strong{color:var(--text);font-weight:600}
+.tip-right{left:auto;right:0;transform:translateX(0) translateY(4px)}
+.has-tip:hover .tip-right,.has-tip:focus .tip-right,.has-tip.tip-active .tip-right{transform:translateX(0) translateY(0)}
+.tip-right::after{left:auto;right:1rem}
 
 /* BEST BETS */
-.bet-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color .2s}
-.bet-card:active{border-color:var(--border2)}
-.bet-header{padding:1rem 1.25rem;display:flex;justify-content:space-between;align-items:center;gap:.75rem;border-bottom:1px solid var(--border)}
+.bet-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color .25s,transform .25s,box-shadow .25s}
+.bet-card:hover{border-color:var(--border2);box-shadow:0 4px 24px rgba(0,0,0,.2)}
+.bet-header{padding:1.25rem 1.25rem 1rem;display:flex;justify-content:space-between;align-items:center;gap:.75rem;border-bottom:1px solid var(--border)}
 .bet-title{font-size:1rem;font-weight:700;line-height:1.3}
 .bet-odds{font-family:'JetBrains Mono',monospace;font-size:1rem;font-weight:700;color:var(--sea);white-space:nowrap}
-.bet-body{padding:1rem 1.25rem}
-.bet-body p{font-size:.85rem;color:var(--text2);line-height:1.65}
-.bet-footer{padding:.6rem 1.25rem;background:var(--surface2);display:flex;justify-content:space-between;align-items:center;font-size:.75rem;gap:.5rem;flex-wrap:wrap}
+.bet-body{padding:1rem 1.25rem 1.25rem}
+.bet-body p{font-size:.85rem;color:var(--text2);line-height:1.7}
+.bet-footer{padding:.7rem 1.25rem;background:var(--surface2);display:flex;justify-content:space-between;align-items:center;font-size:.75rem;gap:.5rem;flex-wrap:wrap}
 .risk-badge{display:inline-flex;align-items:center;gap:.3rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:.65rem}
 .risk-badge.safe{color:var(--sea)}
 .risk-badge.medium{color:var(--gold)}
@@ -136,17 +158,17 @@ section{padding:2.5rem 0}
 .ev-tag{color:var(--sea);font-weight:600}
 
 /* NOVELTY */
-.novelty-grid{display:grid;gap:1rem;grid-template-columns:1fr}
+.novelty-grid{display:grid;gap:1.25rem;grid-template-columns:1fr}
 .novelty-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.25rem}
-.novelty-card h3{font-size:.95rem;font-weight:700;margin-bottom:.85rem;display:flex;align-items:center;gap:.5rem}
+.novelty-card h3{font-size:.95rem;font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
 .novelty-card h3 .emoji{font-size:1.2rem}
-.color-row{display:flex;align-items:center;gap:.65rem;padding:.45rem 0;min-height:40px}
+.color-row{display:flex;align-items:center;gap:.65rem;padding:.5rem 0;min-height:40px}
 .color-swatch{width:22px;height:22px;border-radius:6px;flex-shrink:0;border:2px solid rgba(255,255,255,.1)}
 .color-name{font-size:.85rem;font-weight:500;flex:1}
 .color-odds{font-family:'JetBrains Mono',monospace;font-size:.8rem;font-weight:600;color:var(--text2)}
 
 /* MVP SECTION */
-.mvp-bars{display:flex;flex-direction:column;gap:.35rem}
+.mvp-bars{display:flex;flex-direction:column;gap:.5rem}
 .mvp-row{display:flex;align-items:center;gap:.5rem}
 .mvp-name{width:105px;font-size:.75rem;font-weight:600;text-align:right;flex-shrink:0;line-height:1.2}
 .mvp-bar{flex:1;height:30px;background:var(--surface2);border-radius:8px;overflow:hidden;position:relative}
@@ -154,18 +176,19 @@ section{padding:2.5rem 0}
 .mvp-odds{width:60px;text-align:right;font-family:'JetBrains Mono',monospace;font-size:.85rem;font-weight:600;color:var(--text2)}
 
 /* HALFTIME */
-.song-list{display:flex;flex-direction:column;gap:.2rem}
-.song-row{display:flex;align-items:center;gap:.6rem;padding:.5rem .6rem;border-radius:8px;transition:background .15s;min-height:40px}
+.song-list{display:flex;flex-direction:column;gap:.25rem}
+.song-row{display:flex;align-items:center;gap:.6rem;padding:.55rem .6rem;border-radius:8px;transition:background .15s;min-height:40px}
+.song-row:hover{background:var(--surface2)}
 .song-row:active{background:var(--surface2)}
 .song-rank{width:22px;font-size:.7rem;font-weight:700;color:var(--text3);text-align:center;flex-shrink:0}
 .song-name{flex:1;font-size:.8rem;font-weight:500}
 .song-odds{font-family:'JetBrains Mono',monospace;font-size:.75rem;font-weight:600;color:var(--accent);flex-shrink:0}
 
 /* FOOTER */
-.footer{border-top:1px solid var(--border);padding:2rem 0;padding-bottom:calc(2rem + var(--safe-bottom));text-align:center;color:var(--text3);font-size:.75rem}
+.footer{border-top:1px solid var(--border);padding:2.5rem 0;padding-bottom:calc(2.5rem + var(--safe-bottom));text-align:center;color:var(--text3);font-size:.75rem;line-height:1.8}
 .footer a{color:var(--accent);text-decoration:none}
 
-/* SCROLL ANIMATION — respect reduced motion */
+/* SCROLL ANIMATION */
 @media(prefers-reduced-motion:no-preference){
   .reveal{opacity:0;transform:translateY(20px);transition:opacity .5s,transform .5s}
   .reveal.visible{opacity:1;transform:translateY(0)}
@@ -174,21 +197,25 @@ section{padding:2.5rem 0}
   .reveal{opacity:1;transform:none}
 }
 
-/* TREND ITEM — touch-friendly */
-.trend-item{display:flex;gap:.5rem;align-items:baseline;padding:.4rem 0;font-size:.85rem;color:var(--text2);line-height:1.5}
+/* TREND ITEM */
+.trend-item{display:flex;gap:.6rem;align-items:baseline;padding:.5rem 0;font-size:.85rem;color:var(--text2);line-height:1.55}
 .trend-item .icon{flex-shrink:0}
+
+/* SECTION DIVIDER */
+.section-divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:1rem 0}
 
 /* ===== TABLET (640px+) ===== */
 @media(min-width:640px){
-  .hero{min-height:90vh;padding:2rem}
+  .hero{min-height:90vh;padding:2.5rem}
   .hero h1{font-size:3.4rem}
   .hero-meta{flex-direction:row;gap:1.25rem}
   .hero-badge{font-size:.7rem;padding:.4rem 1rem}
-  .container{padding:0 1.5rem}
-  section{padding:3.5rem 0}
+  .container{padding:0 2rem}
+  section{padding:4rem 0}
+  section + section{padding-top:1.5rem}
   .section-title{font-size:2rem}
   .section-head{margin-bottom:2.5rem}
-  .grid{gap:1.25rem}
+  .grid{gap:1.5rem}
   .grid-2{grid-template-columns:repeat(2,1fr)}
   .grid-3{grid-template-columns:repeat(2,1fr)}
   .grid-4{grid-template-columns:repeat(2,1fr)}
@@ -196,7 +223,9 @@ section{padding:2.5rem 0}
   .card-value{font-size:2rem}
   .novelty-grid{grid-template-columns:repeat(2,1fr)}
   .bar-label{width:110px;font-size:.75rem}
+  .bar-chart{gap:.7rem}
   .mvp-name{width:140px;font-size:.8rem}
+  .mvp-bars{gap:.6rem}
   .bet-header{padding:1.25rem 1.5rem}
   .bet-body{padding:1.25rem 1.5rem}
   .nav a{font-size:.75rem;padding:.5rem .75rem}
@@ -211,18 +240,21 @@ section{padding:2.5rem 0}
   .hero h1{font-size:clamp(3.5rem,5.5vw,5.5rem)}
   .hero-sub{font-size:1.3rem}
   .hero-meta{gap:1.5rem;font-size:.85rem}
-  section{padding:4rem 0}
+  section{padding:5rem 0}
+  section + section{padding-top:2rem}
   .section-title{font-size:clamp(2rem,3.5vw,2.8rem)}
   .section-head{margin-bottom:3rem}
-  .grid{gap:1.5rem}
+  .grid{gap:1.75rem}
   .grid-3{grid-template-columns:repeat(3,1fr)}
   .grid-4{grid-template-columns:repeat(4,1fr)}
   .card-value{font-size:2.2rem}
   .bar-label{width:120px;font-size:.8rem}
   .bar-track{height:28px}
+  .bar-chart{gap:.75rem}
   .mvp-name{width:160px;font-size:.85rem}
   .mvp-bar{height:32px}
-  .bet-card:hover{transform:translateY(-2px)}
+  .bet-card:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.3)}
+  .card:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(0,0,0,.2)}
   .nav a{font-size:.8rem;padding:.4rem .8rem}
   .nav-inner{gap:1rem}
   .comp-table td{font-size:.9rem}
@@ -238,8 +270,8 @@ section{padding:2.5rem 0}
 
 /* iOS notch / Dynamic Island safe areas */
 @supports(padding:max(0px)){
-  .hero{padding-top:max(1.25rem,var(--safe-top))}
-  .footer{padding-bottom:max(2rem,calc(var(--safe-bottom) + 1rem))}
+  .hero{padding-top:max(1.5rem,var(--safe-top))}
+  .footer{padding-bottom:max(2.5rem,calc(var(--safe-bottom) + 1rem))}
   .nav{padding-left:max(.75rem,var(--safe-left));padding-right:max(.75rem,var(--safe-right))}
 }
 
@@ -254,6 +286,7 @@ section{padding:2.5rem 0}
   .bet-header{padding:.85rem 1rem}
   .bet-body{padding:.85rem 1rem}
   .bet-footer{padding:.5rem 1rem}
+  .tip{max-width:240px;font-size:.72rem}
 }
 </style>
 </head>
@@ -303,20 +336,36 @@ section{padding:2.5rem 0}
       <div class="card-label">Spread</div>
       <div class="card-value" style="color:var(--sea)">SEA -4.5</div>
       <div class="card-sub">Opened -3.5, moved to -4.5</div>
+      <div class="bet-links">
+        <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">DraftKings ↗</a>
+        <a href="https://sportsbook.fanduel.com/navigation/nfl" target="_blank" rel="noopener" class="bet-link fd">FanDuel ↗</a>
+      </div>
     </div>
     <div class="card">
       <div class="card-label">Total</div>
-      <div class="card-value">45.5</div>
+      <div class="card-value has-tip" tabindex="0">45.5
+        <div class="tip">Last 5 Super Bowls averaged <strong>49.6 total points</strong>. The 2024 game (KC-SF) hit 47. Both defenses here are elite — this could go under.</div>
+      </div>
       <div class="card-sub">Opened 46.5 — dropped a point</div>
+      <div class="bet-links">
+        <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">DraftKings ↗</a>
+      </div>
     </div>
     <div class="card">
       <div class="card-label">Moneyline</div>
       <div class="card-value" style="font-size:1.6rem"><span style="color:var(--sea)">-230</span> / <span style="color:var(--ne)">+190</span></div>
       <div class="card-sub">SEA / NE</div>
+      <div class="bet-links">
+        <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">DK ↗</a>
+        <a href="https://kalshi.com/markets/superbowl" target="_blank" rel="noopener" class="bet-link kalshi">Kalshi ↗</a>
+        <a href="https://polymarket.com/event/super-bowl-lix" target="_blank" rel="noopener" class="bet-link poly">Poly ↗</a>
+      </div>
     </div>
     <div class="card">
       <div class="card-label">FPI Projection</div>
-      <div class="card-value" style="color:var(--sea)">60%</div>
+      <div class="card-value has-tip" tabindex="0" style="color:var(--sea)">60%
+        <div class="tip tip-right">ESPN's FPI model gives Seattle a <strong>60% win probability</strong> — notably lower than sportsbooks' ~70% implied. The gap suggests value on NE.</div>
+      </div>
       <div class="card-sub">Seahawks win probability</div>
     </div>
   </div>
@@ -324,7 +373,7 @@ section{padding:2.5rem 0}
   <div style="margin-top:2.5rem" class="reveal">
     <div class="card">
       <div class="card-label">Key Trends</div>
-      <div style="display:grid;gap:.4rem;margin-top:.5rem">
+      <div style="display:grid;gap:.5rem;margin-top:.75rem">
         <div class="trend-item"><span class="icon" style="color:var(--ne)">📊</span> Favorites 4.5+ pts are <strong style="color:var(--ne)">1-10 ATS</strong> in Super Bowls since 2000</div>
         <div class="trend-item"><span class="icon" style="color:var(--sea)">📊</span> Underdogs have covered <strong style="color:var(--sea)">5 straight</strong> Super Bowls (4-1 outright)</div>
         <div class="trend-item"><span class="icon" style="color:var(--gold)">📊</span> AFC teams are <strong style="color:var(--gold)">8-3 ATS</strong> in last 11 Super Bowls</div>
@@ -346,10 +395,12 @@ section{padding:2.5rem 0}
   <!-- QBs -->
   <div class="grid grid-2 reveal">
     <div class="card">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem">
         <div>
           <div class="card-label" style="margin-bottom:.25rem">Seahawks QB</div>
-          <div style="font-size:1.4rem;font-weight:800">Sam Darnold</div>
+          <div style="font-size:1.4rem;font-weight:800" class="has-tip" tabindex="0">Sam Darnold
+            <div class="tip">Season: <strong>238 pass yds/gm, 24 TDs, 12 INTs</strong>. Passer rating 95.5. Playoff: 2-0, 245 avg yds. Former 3rd overall pick having a career renaissance.</div>
+          </div>
         </div>
         <div style="font-size:2rem;font-weight:900;color:var(--sea)">#14</div>
       </div>
@@ -360,12 +411,17 @@ section{padding:2.5rem 0}
         <div class="bar-row"><div class="bar-label">Rush Yds (5.5)</div><div class="bar-track"><div class="bar-fill sea" style="width:18%">5.6</div></div></div>
         <div class="bar-row"><div class="bar-label">Passer Rtg (95.5)</div><div class="bar-track"><div class="bar-fill sea" style="width:64%">95.5</div></div></div>
       </div>
+      <div class="bet-links" style="margin-top:1rem">
+        <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">Darnold Props ↗</a>
+      </div>
     </div>
     <div class="card">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem">
         <div>
           <div class="card-label" style="margin-bottom:.25rem">Patriots QB</div>
-          <div style="font-size:1.4rem;font-weight:800">Drake Maye</div>
+          <div style="font-size:1.4rem;font-weight:800" class="has-tip" tabindex="0">Drake Maye
+            <div class="tip">Season: <strong>258 pass yds/gm, 28 TDs, 10 INTs</strong>. Added 26.5 rush yds/gm. Playoff avg: 47 rush yds. 2nd-year QB with dual-threat upside.</div>
+          </div>
         </div>
         <div style="font-size:2rem;font-weight:900;color:var(--ne)">#10</div>
       </div>
@@ -376,70 +432,109 @@ section{padding:2.5rem 0}
         <div class="bar-row"><div class="bar-label">Rush Yds (37.5)</div><div class="bar-track"><div class="bar-fill ne" style="width:42%">26.5</div></div></div>
         <div class="bar-row"><div class="bar-label">Passer Rtg (87.5)</div><div class="bar-track"><div class="bar-fill ne" style="width:58%">87.5</div></div></div>
       </div>
+      <div class="bet-links" style="margin-top:1rem">
+        <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">Maye Props ↗</a>
+      </div>
     </div>
   </div>
 
   <!-- RBs -->
-  <div style="margin-top:2rem" class="reveal">
-    <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1rem;color:var(--text2)">🏃 Rushing Props</h3>
+  <div style="margin-top:2.5rem" class="reveal">
+    <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1.25rem;color:var(--text2)">🏃 Rushing Props</h3>
     <div class="grid grid-3">
       <div class="card">
-        <div class="card-label">Kenneth Walker III</div>
+        <div class="card-label has-tip" tabindex="0">Kenneth Walker III
+          <div class="tip">Playoffs: <strong>89 rush yds avg, 19 carries/gm</strong>. Scored in both postseason games. Lead back since Charbonnet IR. Season: 60.4 yds, 4.0 YPC.</div>
+        </div>
         <div style="font-size:1.3rem;font-weight:700;color:var(--sea)">70.5 rush yds</div>
         <div class="card-sub">Season: 60.4 · Playoffs: 89 · TD: -195</div>
-        <div style="margin-top:.5rem;font-size:.8rem;color:var(--text3)">Featured back since Charbonnet's injury. 19 carries in both playoff games.</div>
+        <div style="margin-top:.6rem;font-size:.8rem;color:var(--text3)">Featured back since Charbonnet's injury. 19 carries in both playoff games.</div>
+        <div class="bet-links">
+          <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">DK ↗</a>
+          <a href="https://sportsbook.fanduel.com/navigation/nfl" target="_blank" rel="noopener" class="bet-link fd">FD ↗</a>
+        </div>
       </div>
       <div class="card">
-        <div class="card-label">Rhamondre Stevenson</div>
+        <div class="card-label has-tip" tabindex="0">Rhamondre Stevenson
+          <div class="tip">Playoffs: <strong>64.7 rush yds avg</strong>. But Seattle's run D allowed just <strong>3.7 YPC (best in NFL)</strong>. Tough sledding expected.</div>
+        </div>
         <div style="font-size:1.3rem;font-weight:700;color:var(--ne)">50.5 rush yds</div>
         <div class="card-sub">Season: 43.1 · Playoffs: 64.7 · TD: +140</div>
-        <div style="margin-top:.5rem;font-size:.8rem;color:var(--text3)">Seattle allowed just 3.7 YPC — best in the league. Tough matchup.</div>
+        <div style="margin-top:.6rem;font-size:.8rem;color:var(--text3)">Seattle allowed just 3.7 YPC — best in the league. Tough matchup.</div>
+        <div class="bet-links">
+          <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">DK ↗</a>
+        </div>
       </div>
       <div class="card">
         <div class="card-label">Total Rushing</div>
         <div style="font-size:1.3rem;font-weight:700">54+ attempts (-105)</div>
         <div class="card-sub">SEA: 100.5 yds · NE: 106.5 yds</div>
-        <div style="margin-top:.5rem;font-size:.8rem;color:var(--text3)">Any player 100+ rushing: +140 · 150+: +1300</div>
+        <div style="margin-top:.6rem;font-size:.8rem;color:var(--text3)">Any player 100+ rushing: +140 · 150+: +1300</div>
+        <div class="bet-links">
+          <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">DK ↗</a>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- WRs -->
-  <div style="margin-top:2rem" class="reveal">
-    <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1rem;color:var(--text2)">📡 Receiving Props</h3>
+  <div style="margin-top:2.5rem" class="reveal">
+    <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1.25rem;color:var(--text2)">📡 Receiving Props</h3>
     <div class="grid grid-2">
       <div class="card">
-        <div class="card-label">Jaxon Smith-Njigba (SEA)</div>
+        <div class="card-label has-tip" tabindex="0">Jaxon Smith-Njigba (SEA)
+          <div class="tip">WR1. Season: <strong>105.5 rec yds/gm</strong>. Scored in both playoff games. Only missed 90 yds twice all season before a 3-game cool stretch. NE allows a TD/game to WRs.</div>
+        </div>
         <div style="font-size:1.3rem;font-weight:700;color:var(--sea)">95.5 rec yds</div>
         <div class="card-sub">Season: 105.5 avg · 6.5 receptions (O -149) · TD: -110</div>
-        <div style="margin-top:.5rem;font-size:.8rem;color:var(--text3)">Star WR1. Scored in both playoff games. Only missed 90 yds twice all season before a 3-game cool stretch.</div>
+        <div style="margin-top:.6rem;font-size:.8rem;color:var(--text3)">Star WR1. Scored in both playoff games. Line is 10 yds below his season avg.</div>
+        <div class="bet-links">
+          <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">DK ↗</a>
+          <a href="https://sportsbook.fanduel.com/navigation/nfl" target="_blank" rel="noopener" class="bet-link fd">FD ↗</a>
+        </div>
       </div>
       <div class="card">
-        <div class="card-label">Stefon Diggs (NE)</div>
+        <div class="card-label has-tip" tabindex="0">Stefon Diggs (NE)
+          <div class="tip">Under 20 yds twice in 3 playoff games. Seattle allows <strong>2nd-fewest WR yds in NFL</strong>. Volume concerns — Maye spreads ball around.</div>
+        </div>
         <div style="font-size:1.3rem;font-weight:700;color:var(--ne)">45.5 rec yds</div>
         <div class="card-sub">Season: 59.6 avg · 4.5 receptions · TD: +275</div>
-        <div style="margin-top:.5rem;font-size:.8rem;color:var(--text3)">Under 20 yds twice in 3 playoff games. Seattle allows 2nd-fewest WR yds in league.</div>
+        <div style="margin-top:.6rem;font-size:.8rem;color:var(--text3)">Under 20 yds twice in 3 playoff games. Seattle allows 2nd-fewest WR yds.</div>
+        <div class="bet-links">
+          <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">DK ↗</a>
+        </div>
       </div>
       <div class="card">
-        <div class="card-label">Cooper Kupp (SEA)</div>
+        <div class="card-label has-tip" tabindex="0">Cooper Kupp (SEA)
+          <div class="tip">Former <strong>SB LVI MVP</strong> (2 TDs, 92 yds). Scored in NFC Championship. 5+ targets in both playoff games. The man thrives in February.</div>
+        </div>
         <div style="font-size:1.3rem;font-weight:700;color:var(--sea)">33.5 rec yds</div>
         <div class="card-sub">Season: 37.1 avg · 3.5 receptions · TD: +260</div>
-        <div style="margin-top:.5rem;font-size:.8rem;color:var(--text3)">Former SB MVP. 5+ targets in both playoff games. Don't bet against Kupp in big games.</div>
+        <div style="margin-top:.6rem;font-size:.8rem;color:var(--text3)">Former SB MVP. 5+ targets in both playoff games. Don't bet against Kupp in big games.</div>
+        <div class="bet-links">
+          <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">DK ↗</a>
+        </div>
       </div>
       <div class="card">
-        <div class="card-label">Hunter Henry (NE)</div>
+        <div class="card-label has-tip" tabindex="0">Hunter Henry (NE)
+          <div class="tip">Seattle allows <strong>6th-most TE yardage (63.5 ypg)</strong>. Recent playoff opponents: Parkinson 62 yds, Tonges 59 yds. Henry averages 45.2 — matchup screams over.</div>
+        </div>
         <div style="font-size:1.3rem;font-weight:700;color:var(--ne)">39.5 rec yds</div>
         <div class="card-sub">Season: 45.2 avg · 3.5 receptions · TD: +240</div>
-        <div style="margin-top:.5rem;font-size:.8rem;color:var(--text3)">Seattle allows 6th-most TE yds (63.5/gm). Key target if Maye needs a safety valve.</div>
+        <div style="margin-top:.6rem;font-size:.8rem;color:var(--text3)">Seattle allows 6th-most TE yds (63.5/gm). Key target if Maye needs a safety valve.</div>
+        <div class="bet-links">
+          <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">DK ↗</a>
+          <a href="https://sportsbook.fanduel.com/navigation/nfl" target="_blank" rel="noopener" class="bet-link fd">FD ↗</a>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Passing combos -->
-  <div style="margin-top:2rem" class="reveal">
-    <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1rem;color:var(--text2)">🎯 Combined Passing Props</h3>
+  <div style="margin-top:2.5rem" class="reveal">
+    <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1.25rem;color:var(--text2)">🎯 Combined Passing Props</h3>
     <div class="card">
-      <div class="grid grid-3" style="gap:1rem">
+      <div class="grid grid-3" style="gap:1.25rem">
         <div>
           <div class="card-label">Total Pass Attempts</div>
           <div style="font-size:1.1rem;font-weight:700">60+ <span style="color:var(--sea)">(-125)</span></div>
@@ -465,6 +560,10 @@ section{padding:2.5rem 0}
           <div style="font-size:1.1rem;font-weight:700">Yes <span style="color:var(--ne)">(+125)</span></div>
         </div>
       </div>
+      <div class="bet-links" style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border)">
+        <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">All Props on DraftKings ↗</a>
+        <a href="https://sportsbook.fanduel.com/navigation/nfl" target="_blank" rel="noopener" class="bet-link fd">All Props on FanDuel ↗</a>
+      </div>
     </div>
   </div>
 </section>
@@ -482,10 +581,10 @@ section{padding:2.5rem 0}
       <thead>
         <tr>
           <th>Market</th>
-          <th>DraftKings</th>
-          <th>FanDuel</th>
-          <th>Kalshi</th>
-          <th>Polymarket</th>
+          <th><a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" style="color:var(--sea);text-decoration:none">DraftKings ↗</a></th>
+          <th><a href="https://sportsbook.fanduel.com/navigation/nfl" target="_blank" rel="noopener" style="color:#0af;text-decoration:none">FanDuel ↗</a></th>
+          <th><a href="https://kalshi.com/markets/superbowl" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none">Kalshi ↗</a></th>
+          <th><a href="https://polymarket.com/event/super-bowl-lix" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">Polymarket ↗</a></th>
         </tr>
       </thead>
       <tbody>
@@ -518,7 +617,9 @@ section{padding:2.5rem 0}
           <td style="color:var(--text3)">—</td>
         </tr>
         <tr>
-          <td><strong>1H Under 20.5</strong></td>
+          <td><strong class="has-tip" tabindex="0">1H Under 20.5
+            <div class="tip">Super Bowls historically start slow. Both defenses here are top-5. The <strong>3.8% gap</strong> between DK and Kalshi is one of the best edges on the board.</div>
+          </strong></td>
           <td>+105 <span style="color:var(--text3);font-size:.75rem">(48.8%)</span></td>
           <td style="color:var(--text3)">—</td>
           <td class="highlight">45¢ <span style="color:var(--text3);font-size:.75rem">(+123 equiv)</span></td>
@@ -530,14 +631,18 @@ section{padding:2.5rem 0}
     <div class="scroll-hint">← Swipe to see all platforms →</div>
   </div>
 
-  <div style="margin-top:1.5rem" class="reveal">
+  <div style="margin-top:2rem" class="reveal">
     <div class="card" style="border-color:var(--sea);background:var(--sea-bg)">
       <div style="display:flex;gap:.75rem;align-items:flex-start">
-        <span style="font-size:1.5rem">💡</span>
+        <span style="font-size:1.5rem;flex-shrink:0">💡</span>
         <div>
-          <div style="font-weight:700;margin-bottom:.25rem">Edge Spotted: Prediction Markets vs. Sportsbooks</div>
-          <div style="font-size:.9rem;color:var(--text2)">
+          <div style="font-weight:700;margin-bottom:.4rem">Edge Spotted: Prediction Markets vs. Sportsbooks</div>
+          <div style="font-size:.9rem;color:var(--text2);line-height:1.7">
             Sportsbooks imply ~70% for Seattle (with juice). Kalshi/Polymarket price it at 68%, which is closer to ESPN's FPI model (60%). The prediction markets carry no vig — if you believe the sportsbook line, buying Patriots at 33¢ on Kalshi offers better value than NE +190 on DraftKings (implied 34.5% with juice baked in). Similarly, the 1H Under 20.5 shows a <strong>3.8% gap</strong> between Kalshi (45%) and DraftKings (48.8%).
+          </div>
+          <div class="bet-links" style="margin-top:1rem">
+            <a href="https://kalshi.com/markets/superbowl" target="_blank" rel="noopener" class="bet-link kalshi">Buy on Kalshi ↗</a>
+            <a href="https://polymarket.com/event/super-bowl-lix" target="_blank" rel="noopener" class="bet-link poly">Buy on Polymarket ↗</a>
           </div>
         </div>
       </div>
@@ -561,6 +666,10 @@ section{padding:2.5rem 0}
       </div>
       <div class="bet-body">
         <p>Favorites of 4.5+ are <strong>1-10 ATS</strong> in Super Bowls since 2000. Underdogs have covered 5 straight. The Pats are 14-6 ATS this season, and Vrabel has never lost a Super Bowl. The history here is overwhelming.</p>
+        <div class="bet-links">
+          <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">Bet on DK ↗</a>
+          <a href="https://sportsbook.fanduel.com/navigation/nfl" target="_blank" rel="noopener" class="bet-link fd">Bet on FD ↗</a>
+        </div>
       </div>
       <div class="bet-footer">
         <span class="risk-badge safe"><span class="risk-dot"></span> Safe</span>
@@ -575,6 +684,9 @@ section{padding:2.5rem 0}
       </div>
       <div class="bet-body">
         <p>Seattle allows the <strong>6th-most TE yardage</strong> in the league (63.5 ypg). Both Parkinson (62 yds) and Tonges (59 yds) just torched them in the playoffs. Henry averages 45.2 in the regular season — this line is begging for the Over.</p>
+        <div class="bet-links">
+          <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">Bet on DK ↗</a>
+        </div>
       </div>
       <div class="bet-footer">
         <span class="risk-badge safe"><span class="risk-dot"></span> Safe</span>
@@ -589,6 +701,10 @@ section{padding:2.5rem 0}
       </div>
       <div class="bet-body">
         <p>Walker has scored in <strong>both playoff games</strong> and is the clear lead back with Charbonnet out. Getting 19 carries per game. At -195 the juice is heavy, but this is one of the safest legs for a parlay.</p>
+        <div class="bet-links">
+          <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">Bet on DK ↗</a>
+          <a href="https://sportsbook.fanduel.com/navigation/nfl" target="_blank" rel="noopener" class="bet-link fd">Bet on FD ↗</a>
+        </div>
       </div>
       <div class="bet-footer">
         <span class="risk-badge safe"><span class="risk-dot"></span> Safe</span>
@@ -603,6 +719,9 @@ section{padding:2.5rem 0}
       </div>
       <div class="bet-body">
         <p>Maye averaged 47 rush yds/game in the playoffs. Seattle's pass rush will force him to scramble. He's rushed for 6+ attempts in the postseason. The line is set below his playoff average — take the Over.</p>
+        <div class="bet-links">
+          <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">Bet on DK ↗</a>
+        </div>
       </div>
       <div class="bet-footer">
         <span class="risk-badge medium"><span class="risk-dot"></span> Medium</span>
@@ -617,6 +736,9 @@ section{padding:2.5rem 0}
       </div>
       <div class="bet-body">
         <p>Smith-Njigba averages 105.5 ypg in the regular season and has scored in both playoff games. The Pats allow a TD/game to WRs. His line is 10 yards below his season avg. Expect Darnold to lean on his WR1.</p>
+        <div class="bet-links">
+          <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">Bet on DK ↗</a>
+        </div>
       </div>
       <div class="bet-footer">
         <span class="risk-badge medium"><span class="risk-dot"></span> Medium</span>
@@ -631,6 +753,9 @@ section{padding:2.5rem 0}
       </div>
       <div class="bet-body">
         <p>DraftKings prices this at +105 (48.8% implied). Kalshi has it at 45¢. That's a <strong>3.8% edge</strong> on the same bet. Super Bowls historically start slow, and both defenses are elite. Buy on Kalshi for better value.</p>
+        <div class="bet-links">
+          <a href="https://kalshi.com/markets/superbowl" target="_blank" rel="noopener" class="bet-link kalshi">Buy on Kalshi ↗</a>
+        </div>
       </div>
       <div class="bet-footer">
         <span class="risk-badge medium"><span class="risk-dot"></span> Medium</span>
@@ -645,6 +770,10 @@ section{padding:2.5rem 0}
       </div>
       <div class="bet-body">
         <p>Both defenses are top-tier. Total already dropped from 46.5. Seattle's D allowed 3.7 YPC (best in NFL). The Pats' offense sputtered in the AFC Championship. No SB total has been below 47 since 2015 though — this one could break the streak.</p>
+        <div class="bet-links">
+          <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">Bet on DK ↗</a>
+          <a href="https://sportsbook.fanduel.com/navigation/nfl" target="_blank" rel="noopener" class="bet-link fd">Bet on FD ↗</a>
+        </div>
       </div>
       <div class="bet-footer">
         <span class="risk-badge medium"><span class="risk-dot"></span> Medium</span>
@@ -659,6 +788,9 @@ section{padding:2.5rem 0}
       </div>
       <div class="bet-body">
         <p>It's Cooper Kupp in the Super Bowl. The man literally won SB MVP four years ago with 2 TDs. He scored in the NFC Championship and is seeing elevated targets. At +260, this is a great value sprinkle.</p>
+        <div class="bet-links">
+          <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">Bet on DK ↗</a>
+        </div>
       </div>
       <div class="bet-footer">
         <span class="risk-badge spicy"><span class="risk-dot"></span> Spicy</span>
@@ -673,6 +805,10 @@ section{padding:2.5rem 0}
       </div>
       <div class="bet-body">
         <p>The last time NE was a SB underdog? They beat the Rams in 2002. Vrabel was on that team. FPI gives Seattle only a 60% chance — prediction markets price NE at 33%, which is better than the sportsbook +190. The Cinderella story is live.</p>
+        <div class="bet-links">
+          <a href="https://kalshi.com/markets/superbowl" target="_blank" rel="noopener" class="bet-link kalshi">Buy on Kalshi ↗</a>
+          <a href="https://polymarket.com/event/super-bowl-lix" target="_blank" rel="noopener" class="bet-link poly">Buy on Polymarket ↗</a>
+        </div>
       </div>
       <div class="bet-footer">
         <span class="risk-badge spicy"><span class="risk-dot"></span> Spicy</span>
@@ -687,6 +823,9 @@ section{padding:2.5rem 0}
       </div>
       <div class="bet-body">
         <p>Orange is the most common Gatorade color in SB history (6 times). It's the favorite for a reason. If Seattle wins — and most expect them to — Macdonald is getting the orange shower. It's the most fun bet at any party.</p>
+        <div class="bet-links">
+          <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">Bet on DK ↗</a>
+        </div>
       </div>
       <div class="bet-footer">
         <span class="risk-badge spicy"><span class="risk-dot"></span> Spicy</span>
@@ -717,14 +856,21 @@ section{padding:2.5rem 0}
         <span class="odds-value">-102</span>
       </div>
       <div class="odds-row">
-        <span class="odds-name">Toss winner wins game?</span>
+        <span class="odds-name has-tip" tabindex="0">Toss winner wins game?
+          <div class="tip">The coin toss winner has <strong>lost 8 straight</strong> Super Bowls from 2015-2022. All-time the toss winner has won only <strong>42.4%</strong> of games.</div>
+        </span>
         <span class="odds-value" style="color:var(--text3)">Only 42.4% historically</span>
       </div>
       <div style="margin-top:.75rem;font-size:.8rem;color:var(--text3)">Tails leads all-time 31-28. Winner has lost 8 straight SBs from 2015-2022.</div>
+      <div class="bet-links">
+        <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">DK ↗</a>
+      </div>
     </div>
 
     <div class="novelty-card reveal">
-      <h3><span class="emoji">🎤</span> National Anthem (Charlie Puth)</h3>
+      <h3><span class="emoji">🎤</span> National Anthem <span class="has-tip" tabindex="0" style="font-size:.75rem;font-weight:400;color:var(--text3)">(Charlie Puth)
+        <div class="tip">Average SB anthem length since 2010: <strong>~117 seconds</strong>. Puth is known for precision — expect him close to the line. Recent SBs: Blige 2:02, Stapleton 2:11, Lovato 1:49.</div>
+      </span></h3>
       <div class="odds-row">
         <span class="odds-name">Over 119.5 seconds</span>
         <span class="odds-value minus">-110</span>
@@ -741,10 +887,15 @@ section{padding:2.5rem 0}
         <span class="odds-name">Player/coach cries</span>
         <span class="odds-value minus">Yes -230</span>
       </div>
+      <div class="bet-links">
+        <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">DK ↗</a>
+      </div>
     </div>
 
     <div class="novelty-card reveal">
-      <h3><span class="emoji">🥤</span> Gatorade Color</h3>
+      <h3><span class="emoji">🥤</span> <span class="has-tip" tabindex="0">Gatorade Color
+        <div class="tip">All-time results: <strong>Orange 6x</strong>, Clear 5x, Yellow 4x, Blue 2x, Purple 2x, Red 1x. Last 3 years: Yellow/Green → Purple → Purple.</div>
+      </span></h3>
       <div class="color-row">
         <div class="color-swatch" style="background:#f80"></div>
         <span class="color-name">Orange</span>
@@ -775,7 +926,9 @@ section{padding:2.5rem 0}
         <span class="color-name">Clear/Water</span>
         <span class="color-odds">+1100</span>
       </div>
-      <div style="margin-top:.75rem;font-size:.75rem;color:var(--text3)">Orange has won 6x (most). Last 3: Yellow/Green → Purple → Purple.</div>
+      <div class="bet-links">
+        <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">DK ↗</a>
+      </div>
     </div>
 
     <div class="novelty-card reveal">
@@ -789,7 +942,9 @@ section{padding:2.5rem 0}
         <span class="odds-value">Maye -160</span>
       </div>
       <div class="odds-row">
-        <span class="odds-name">Pass from own 1-yd line (SEA)</span>
+        <span class="odds-name has-tip" tabindex="0">Pass from own 1-yd line (SEA)
+          <div class="tip">The infamous play. Seattle passing from their own 1 in a Super Bowl… <strong>what could go wrong?</strong> 😏 (SB XLIX flashbacks intensify)</div>
+        </span>
         <span class="odds-value plus">+550</span>
       </div>
       <div class="odds-row">
@@ -799,6 +954,9 @@ section{padding:2.5rem 0}
       <div class="odds-row">
         <span class="odds-name">Perfect passer rating (either)</span>
         <span class="odds-value plus">+5000</span>
+      </div>
+      <div class="bet-links">
+        <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">DK ↗</a>
       </div>
     </div>
 
@@ -815,7 +973,7 @@ section{padding:2.5rem 0}
   <div class="grid grid-2 reveal">
     <div class="card">
       <div class="card-label">First Song Odds (Top 10)</div>
-      <div class="song-list" style="margin-top:.5rem">
+      <div class="song-list" style="margin-top:.75rem">
         <div class="song-row"><span class="song-rank">1</span><span class="song-name">Tití Me Preguntó</span><span class="song-odds">-125</span></div>
         <div class="song-row"><span class="song-rank">2</span><span class="song-name">BAILE INoLVIDABLE</span><span class="song-odds">+380</span></div>
         <div class="song-row"><span class="song-rank">3</span><span class="song-name">MONACO</span><span class="song-odds">+430</span></div>
@@ -827,10 +985,13 @@ section{padding:2.5rem 0}
         <div class="song-row"><span class="song-rank">9</span><span class="song-name">Me Porto Bonito</span><span class="song-odds">+1100</span></div>
         <div class="song-row"><span class="song-rank">10</span><span class="song-name">La CANCIÓN</span><span class="song-odds">+1400</span></div>
       </div>
+      <div class="bet-links" style="margin-top:1rem">
+        <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">DK ↗</a>
+      </div>
     </div>
     <div class="card">
       <div class="card-label">Last Song Odds (Top 10)</div>
-      <div class="song-list" style="margin-top:.5rem">
+      <div class="song-list" style="margin-top:.75rem">
         <div class="song-row"><span class="song-rank">1</span><span class="song-name">DtMF</span><span class="song-odds">+125</span></div>
         <div class="song-row"><span class="song-rank">2</span><span class="song-name">EoO</span><span class="song-odds">+380</span></div>
         <div class="song-row"><span class="song-rank">3</span><span class="song-name">LA MuDANZA</span><span class="song-odds">+550</span></div>
@@ -842,9 +1003,12 @@ section{padding:2.5rem 0}
         <div class="song-row"><span class="song-rank">9</span><span class="song-name">El Apagón</span><span class="song-odds">+1300</span></div>
         <div class="song-row"><span class="song-rank">10</span><span class="song-name">Tití Me Preguntó</span><span class="song-odds">+1400</span></div>
       </div>
+      <div class="bet-links" style="margin-top:1rem">
+        <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">DK ↗</a>
+      </div>
     </div>
   </div>
-  <div class="grid grid-3 reveal" style="margin-top:1.5rem">
+  <div class="grid grid-3 reveal" style="margin-top:2rem">
     <div class="card">
       <div class="card-label">Total Songs</div>
       <div class="card-value">11.5</div>
@@ -855,7 +1019,9 @@ section{padding:2.5rem 0}
       <div class="card-value" style="font-size:1.5rem">Yes +184 / No -230</div>
     </div>
     <div class="card">
-      <div class="card-label">Global Viewers</div>
+      <div class="card-label has-tip" tabindex="0">Global Viewers
+        <div class="tip">SB LVIII drew <strong>123.4M viewers</strong> (most watched US broadcast ever). The NFL has been growing internationally — Bad Bunny's global appeal could push this higher.</div>
+      </div>
       <div class="card-value" style="font-size:1.5rem">O/U 135.5M</div>
     </div>
   </div>
@@ -898,25 +1064,29 @@ section{padding:2.5rem 0}
         <div class="mvp-bar"><div class="mvp-fill" style="width:7%;background:linear-gradient(90deg,#a22,var(--ne))">+4000</div></div>
       </div>
     </div>
+    <div class="bet-links" style="margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border)">
+      <a href="https://sportsbook.draftkings.com/leagues/football/nfl" target="_blank" rel="noopener" class="bet-link dk">MVP Props on DK ↗</a>
+      <a href="https://sportsbook.fanduel.com/navigation/nfl" target="_blank" rel="noopener" class="bet-link fd">MVP Props on FD ↗</a>
+    </div>
   </div>
 
-  <div style="margin-top:2rem" class="reveal">
-    <div class="card-label" style="margin-bottom:1rem">Expert Score Predictions</div>
+  <div style="margin-top:2.5rem" class="reveal">
+    <div class="card-label" style="margin-bottom:1.25rem">Expert Score Predictions</div>
     <div class="grid grid-4">
       <div class="card" style="text-align:center">
-        <div style="font-size:.75rem;color:var(--text3);margin-bottom:.25rem">Will Hill (FOX)</div>
+        <div style="font-size:.75rem;color:var(--text3);margin-bottom:.35rem">Will Hill (FOX)</div>
         <div style="font-size:1.3rem;font-weight:800"><span style="color:var(--sea)">SEA 27</span> - <span style="color:var(--ne)">NE 17</span></div>
       </div>
       <div class="card" style="text-align:center">
-        <div style="font-size:.75rem;color:var(--text3);margin-bottom:.25rem">Fallica (FOX)</div>
+        <div style="font-size:.75rem;color:var(--text3);margin-bottom:.35rem">Fallica (FOX)</div>
         <div style="font-size:1.3rem;font-weight:800"><span style="color:var(--sea)">SEA 27</span> - <span style="color:var(--ne)">NE 23</span></div>
       </div>
       <div class="card" style="text-align:center">
-        <div style="font-size:.75rem;color:var(--text3);margin-bottom:.25rem">Sammy P (FOX)</div>
+        <div style="font-size:.75rem;color:var(--text3);margin-bottom:.35rem">Sammy P (FOX)</div>
         <div style="font-size:1.3rem;font-weight:800"><span style="color:var(--sea)">SEA 23</span> - <span style="color:var(--ne)">NE 20</span></div>
       </div>
       <div class="card" style="text-align:center">
-        <div style="font-size:.75rem;color:var(--text3);margin-bottom:.25rem">Schwartz (FOX)</div>
+        <div style="font-size:.75rem;color:var(--text3);margin-bottom:.35rem">Schwartz (FOX)</div>
         <div style="font-size:1.3rem;font-weight:800"><span style="color:var(--sea)">SEA 24</span> - <span style="color:var(--ne)">NE 13</span></div>
       </div>
     </div>
@@ -926,8 +1096,8 @@ section{padding:2.5rem 0}
 <!-- FOOTER -->
 <footer class="footer container">
   <p style="margin-bottom:.5rem">Super Bowl LX Props Lab · Built for game day, Feb 8 2026</p>
-  <p>Data from DraftKings, FanDuel, Kalshi, Polymarket, CBS Sports, ESPN, FOX Sports · Not gambling advice</p>
-  <p style="margin-top:.5rem">Made with ☕ by <a href="https://github.com/StryxZilla">@StryxZilla</a></p>
+  <p>Data from <a href="https://sportsbook.draftkings.com" target="_blank" rel="noopener">DraftKings</a>, <a href="https://sportsbook.fanduel.com" target="_blank" rel="noopener">FanDuel</a>, <a href="https://kalshi.com" target="_blank" rel="noopener">Kalshi</a>, <a href="https://polymarket.com" target="_blank" rel="noopener">Polymarket</a>, CBS Sports, ESPN, FOX Sports · Not gambling advice</p>
+  <p style="margin-top:.75rem">Made with ☕ by <a href="https://github.com/StryxZilla">@StryxZilla</a></p>
 </footer>
 
 <script>
@@ -944,6 +1114,22 @@ window.addEventListener('scroll', () => {
   let current = '';
   sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
   navLinks.forEach(a => { a.classList.toggle('active', a.getAttribute('href') === '#' + current); });
+});
+
+// Mobile tooltip tap support
+document.querySelectorAll('.has-tip').forEach(el => {
+  el.addEventListener('click', function(e) {
+    // Close all other tooltips
+    document.querySelectorAll('.has-tip.tip-active').forEach(t => { if (t !== this) t.classList.remove('tip-active'); });
+    this.classList.toggle('tip-active');
+  });
+});
+
+// Close tooltips on outside tap
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.has-tip')) {
+    document.querySelectorAll('.has-tip.tip-active').forEach(t => t.classList.remove('tip-active'));
+  }
 });
 </script>
 </body>
