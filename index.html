@@ -147,7 +147,8 @@ h2{margin-top:2.5rem}
 .tip-right::after{left:auto;right:1rem}
 
 /* BEST BETS */
-.bet-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color .25s,transform .25s,box-shadow .25s}
+.bet-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:visible;transition:border-color .25s,transform .25s,box-shadow .25s}
+.bet-card .bet-footer{border-radius:0 0 14px 14px}
 .bet-card:hover{border-color:var(--border2);box-shadow:0 4px 24px rgba(0,0,0,.2)}
 .bet-header{padding:1.25rem 1.25rem 1rem;display:flex;justify-content:space-between;align-items:center;gap:.75rem;border-bottom:1px solid var(--border)}
 .bet-title{font-size:1rem;font-weight:700;line-height:1.3}
@@ -718,7 +719,7 @@ h2{margin-top:2.5rem}
     <div class="section-title">Best Bets 🔥</div>
     <div class="section-desc">Our top picks with reasoning. Not financial advice — but definitely conversation starters at the party.
       <span class="has-tip" tabindex="0" style="margin-left:.25rem;cursor:help;border-bottom:none;display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--surface2);border:1px solid var(--border);font-size:.7rem;font-weight:700;color:var(--text3);vertical-align:middle">ⓘ
-        <div class="tip" style="width:380px;max-width:90vw;text-align:left">
+        <div class="tip tip-right" style="width:380px;max-width:90vw;text-align:left">
           <div style="font-weight:700;color:var(--text);margin-bottom:.5rem;font-size:.85rem">📊 Our Methodology</div>
           <div style="margin-bottom:.5rem"><strong style="color:var(--text)">Data:</strong> ESPN, CBS, FOX, Pro Football Reference, NFL Next Gen Stats. Lines from DraftKings, FanDuel, Kalshi & Polymarket (Feb 7–8, 2026).</div>
           <div style="margin-bottom:.5rem"><strong style="color:var(--text)">How we pick:</strong> We look for convergence between statistical trends, line value (where implied probability diverges), and cross-platform pricing gaps. A pick makes the list when 2 of 3 align.</div>
@@ -1765,12 +1766,31 @@ window.addEventListener('scroll', () => {
   navLinks.forEach(a => { a.classList.toggle('active', a.getAttribute('href') === '#' + current); });
 });
 
-// Mobile tooltip tap support
+// Mobile tooltip tap support + smart positioning
 document.querySelectorAll('.has-tip').forEach(el => {
   el.addEventListener('click', function(e) {
     // Close all other tooltips
     document.querySelectorAll('.has-tip.tip-active').forEach(t => { if (t !== this) t.classList.remove('tip-active'); });
     this.classList.toggle('tip-active');
+    // Smart reposition if active
+    if (this.classList.contains('tip-active')) {
+      const tip = this.querySelector('.tip');
+      if (tip) {
+        requestAnimationFrame(() => {
+          const r = tip.getBoundingClientRect();
+          if (r.right > window.innerWidth - 8) {
+            tip.style.left = 'auto';
+            tip.style.right = '0';
+            tip.style.transform = 'translateX(0) translateY(0)';
+          }
+          if (r.left < 8) {
+            tip.style.left = '0';
+            tip.style.right = 'auto';
+            tip.style.transform = 'translateX(0) translateY(0)';
+          }
+        });
+      }
+    }
   });
 });
 
